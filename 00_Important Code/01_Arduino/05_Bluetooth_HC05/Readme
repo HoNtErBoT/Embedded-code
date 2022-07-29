@@ -1,0 +1,27 @@
+
+
+HC-05 is a Bluetooth module which is designed for wireless comunication.This HC05 bluetooth serial module, 
+it allow all serial enabled devices to communicate with each other using Bluetooth.
+
+
+
+1.  Key/EN: It is used to bring Bluetooth module in AT commands mode. If Key/EN pin is set to high, then this 
+    module will work in command mode. Otherwise by default it is in data mode. The default baud rate of HC-05 
+    in command mode is 38400bps and 9600 in data mode.
+
+    HC-05 module has two modes,
+
+          1.  Data mode: Exchange of data between devices.
+
+          2.  Command mode: It uses AT commands which are used to change setting of HC-05. To send these commands to module serial (USART) port is used.
+
+2.  VCC: Connect 5 V or 3.3 V to this Pin.
+
+3.  GND: Ground Pin of module.
+
+4.  TXD: Transmit Serial data (wirelessly received data by Bluetooth module transmitted out serially on TXD pin)
+
+5.  RXD: Receive data serially (received data will be transmitted wirelessly by Bluetooth module).
+
+6.  State: It tells whether module is connected or not.
+
