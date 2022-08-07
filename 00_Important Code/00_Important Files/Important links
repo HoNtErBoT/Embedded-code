@@ -1,4 +1,28 @@
-ESP8266 and ESP32 Arduino install link
-
+             ESP8266 and ESP32 Arduino install link
+             -------------------------------------
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 https://dl.espressif.com/dl/package_esp32_index.json
+
+
+
+             ATMEGA8 Programming with Arduino IDE
+             ------------------------------------
+There are different types of cores available on MCUDude’s GitHub repository.
+MiniCore is used for ATmega8 microcontroller. Supported microcontrollers in 
+this core are:
+
+    ATmega8
+    ATmega48
+    ATmega88
+    ATmega168
+    ATmega328
+
+Follow steps below to install MiniCore in your Arduino IDE.
+
+    In File menu, click on Preferences.
+    Now in Additional Boards Manger URLs, enter the following URL:
+
+https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
+
+    Go to Tools menu and then select Board > Boards Manager
+    In Boards Manager window, search for MiniCore and then install the latest version.
