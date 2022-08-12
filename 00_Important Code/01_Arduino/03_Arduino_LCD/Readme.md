@@ -55,3 +55,30 @@ DIY circuits, devices, and embedded projects.
 ![Arduino LCD Interface CKT](https://github.com/HoNtErBoT/Embedded-Circuit-importat/blob/main/03_Arduino/03_Arduino%20LCD%20Circuit.png)
 
 
+## LCD Commands
+
+There are some preset commands instructions in LCD, which we need to send to LCD through some microcontroller. Some important command instructions are given below: in arduino we dont need these commands ,whith the help of LiquidCrystal library we can controll lcd easily
+
+|Hex Code|	Command to LCD Instruction Register|
+| :---: | :---: | 
+|0F|	LCD ON, cursor ON|
+|01|	Clear display screen|
+|02|	Return home|
+|04|	Decrement cursor (shift cursor to left)|
+|06|	Increment cursor (shift cursor to right)|
+|05|	Shift display right|
+|07|	Shift display left|
+|0E|	Display ON, cursor blinking|
+|80|	Force cursor to beginning of first line|
+|C0|	Force cursor to beginning of second line|
+|38|	2 lines and 5×7 matrix|
+|83|	Cursor line 1 position 3|
+|3C|	Activate second line|
+|08|	Display OFF, cursor OFF|
+|C1|	Jump to second line, position 1|
+|OC|	Display ON, cursor OFF|
+|C1|	Jump to second line, position 1|
+|C2|	Jump to second line, position 2|
+
+
+
