@@ -9,4 +9,49 @@ available in the market like 8×1, 8×2, 10×2, 16×1, etc. but the 16×2 LCD is
 These LCD modules are low cost,and programmer-friendly, therefore, is used in various 
 DIY circuits, devices, and embedded projects.
 
-![Arduino LCD Interface CKT](https://github.com/HoNtErBoT/Embedded_Project/blob/main/00_Important%20Code/01_Arduino/03_Arduino_LCD/Arduino%20LCD%20Circuit.png)
+
+
+| Pin number |name |Description |
+| :---: | :---: | :---: |
+| 1 | Ground/Source Pin | This is a GND pin of display, used to connect the GND terminal of the microcontroller unit or power source. |
+| 2 | VCC/Source Pin | This is the voltage supply pin of the display, used to connect the supply pin of the power source. |
+| 3 | V0/VEE/Control Pin | Adjusts the contrast of the LCD. |
+| 4 | Register Select|This pin toggles among command or data register, used to connect a microcontroller unit pin and obtains either 0 or 1(0 = data mode, and 1 = command mode). |
+| 5 |Read/Write/Control Pin |This pin toggles the display among the read or writes operation, and it is connected to a microcontroller unit pin to get either 0 or 1 (0 = Write Operation, and 1 = Read Operation). |
+| 6 |Enable/Control Pin|This pin should be held high to execute Read/Write process, and it is connected to the microcontroller unit & constantly held high. |
+| 7 to 14 |Data Pins |These pins are used to send data to the display. These pins are connected in two-wire modes like 4-wire mode and 8-wire mode. In 4-wire mode, only four pins are connected to the microcontroller unit like 0 to 3, whereas in 8-wire mode, 8-pins are connected to microcontroller unit like 0 to 7. |
+| 15 |+ve pin of the LED |This pin is connected to +5V |
+| 16 | -ve pin of the LED |  This pin is connected to GND.|
+
+# Arduino LCD Interface code
+<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">LiquidCrystal</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<b><font color="#d35400">LiquidCrystal</font></b> <font color="#000000">lcd</font><font color="#000000">(</font><font color="#000000">2</font><font color="#434f54">,</font> <font color="#000000">3</font><font color="#434f54">,</font> <font color="#000000">4</font><font color="#434f54">,</font> <font color="#000000">5</font><font color="#434f54">,</font> <font color="#000000">6</font><font color="#434f54">,</font> <font color="#000000">7</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> 
+<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">16</font><font color="#434f54">,</font> <font color="#000000">2</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34;hello, world!&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">1000</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">clear</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+<font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ <font color="#00979c">int</font> <font color="#000000">a</font><font color="#434f54">=</font><font color="#000000">20</font><font color="#000000">;</font>
+
+ &nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">setCursor</font><font color="#000000">(</font><font color="#000000">5</font><font color="#434f54">,</font> <font color="#000000">0</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; set the cursor to column 5, line 1</font>
+ &nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#d35400">millis</font><font color="#000000">(</font><font color="#000000">)</font><font color="#434f54">&#47;</font><font color="#000000">1000</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">setCursor</font><font color="#000000">(</font><font color="#000000">5</font><font color="#434f54">,</font> <font color="#000000">1</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; set the cursor to column 5, line 2</font>
+ &nbsp;<font color="#000000">lcd</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">a</font><font color="#000000">)</font><font color="#000000">;</font>
+ 
+<font color="#000000">}</font>
+
+</pre>
+
+
+
+# Arduino LCD Interface Circuit
+
+![Arduino LCD Interface CKT](https://github.com/HoNtErBoT/Embedded-Circuit-importat/blob/main/03_Arduino/03_Arduino%20LCD%20Circuit.png)
+
+
