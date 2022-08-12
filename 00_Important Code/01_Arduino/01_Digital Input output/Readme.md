@@ -6,7 +6,7 @@ The UNO board provides access to 14 Digital I/O pins (0-13). Of these 14 digital
 ![Arduino UNO ](https://github.com/HoNtErBoT/Embedded-Circuit-importat/blob/main/03_Arduino/Arduino%20uno%20Digital%20and%20analog%20pins.png)
 
 ##  What is a Bootloader?
-If we take a bare microcontroller chip fresh from the factory and apply power to it, the internal system clock will start ticking away.  But nothing else will happen.  Without a program to run, the chip will just sit there doing nothing. Most microcontroller chips have a special programming interface that allows you to burn programs into Flash memory.  Unfortunately, these programming interfaces generally require some specialized tools
+If we take a bare microcontroller chip fresh from the factory and apply power to it, the internal system clock will start ticking away.  But nothing else will happen.  Without a program to run, the chip wont get processed until a program is been loaded. Most microcontroller chips have a special programming interface that allows you to burn programs into Flash memory.  Unfortunately, these programming interfaces generally require some specialized tools
 
 The bootloader is a small piece of software that allows uploading of sketches onto the Arduino board via a more convenient interface like a standard USB cable
 
