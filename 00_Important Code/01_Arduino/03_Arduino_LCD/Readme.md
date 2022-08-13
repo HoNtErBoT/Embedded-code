@@ -1,7 +1,7 @@
 # Arduino LCD Interface
 
 16×2 LCD is one kind of electronic device used to display the message and data.
-The term LCD full form is Liquid Crystal Display.  The display is named 16×2 LCD
+The term LCD stands for Liquid Crystal Display.  The display is named 16×2 LCD
 because it has 16 Columns and 2 Rows. it can be displayed (16×2=32) 32 characters 
 in total and each character will be made of 5×8 Pixel Dots. These displays are mainly
 based on multi-segment light-emitting diodes.  There are a lot of combinations of display 
