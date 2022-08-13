@@ -1,33 +1,30 @@
-# Arduino Bluetooth Interface
+# Bluetooth
 
 
-Bluetooth is a technology standard used to enable short-range wireless communication between electronic devices. Since Bluetooth operates on radio frequencies, rather than the infrared spectrum used by traditional remote controls, devices using this technology do not have to maintain a line of sight to communicate.
-
-
-
-
-HC-05 is a Bluetooth module which is designed for wireless comunication.This HC05 bluetooth serial module, 
-it allow all serial enabled devices to communicate with each other using Bluetooth.
+Bluetooth is a technology standard used to enable short-range wireless communication between electronic devices. Since Bluetooth operates on radio frequencies, rather than the infrared spectrum used by traditional remote controls, devices using this technology do not have to maintain a line of sight to communicate. Every bluetooth enabled device requires a low-cost **transceiver** chip be included in each device. The transceiver chip transmits and receives data through a previously unused frequency band of **2.45 Ghz** that is available globally,The maximum Bluetooth range is 10 meters.
 
 
 
-1.  Key/EN: It is used to bring Bluetooth module in AT commands mode. If Key/EN pin is set to high, then this 
-    module will work in command mode. Otherwise by default it is in data mode. The default baud rate of HC-05 
-    in command mode is 38400bps and 9600 in data mode.
 
-    HC-05 module has two modes,
+**HC-05** is a Bluetooth module which is designed for wireless comunication, This HC05 bluetooth serial module allow all serial enabled devices to communicate with each other using Bluetooth.This can be used in two modes of operation.
+### Modes of Operation
+   - Command Mode 
+   - Data Mode. 
 
-          1.  Data mode: Exchange of data between devices.
+### HC-05 Pinout Configuration
+|Pin Number  |Pin Name |Description |
+| :---: | :---: | :---: |
+| 1 |Enable / Key |This pin is used to toggle between Data Mode (set low) and AT command mode (set high). By default it is in Data mode, The default baud rate of HC-05 **in command mode is 38400bps** and **9600 in data mode** |
+| 2 | Vcc| Powers the module. Connect to +5V Supply voltage |
+| 3 | Ground|Ground pin of module, connect to system ground. |
+| 4 | TX| Transmits Serial Data. Everything received via Bluetooth will be given out by this pin as serial data.|
+| 5 | RX| Receive Serial Data. Every serial data given to this pin will be broadcasted via Bluetooth|
+| 6 | State| The state pin is connected to on board LED, it can be used as a feedback to check if Bluetooth is working properly.|
+| 7 | LED| Indicates the status of Module <br>1) Blink once in 2 sec-> Module has entered Command Mode   <br>2) Repeated Blinking -> Waiting for connection in Data Mode <br>3) Blink twice in 1 sec -> Connection successful in Data Mode |
+| 8 | Button|Used to control the Key/Enable pin to toggle between Data and command Mode |
 
-          2.  Command mode: It uses AT commands which are used to change setting of HC-05. To send these commands to module serial (USART) port is used.
 
-2.  VCC: Connect 5 V or 3.3 V to this Pin.
 
-3.  GND: Ground Pin of module.
 
-4.  TXD: Transmit Serial data (wirelessly received data by Bluetooth module transmitted out serially on TXD pin)
 
-5.  RXD: Receive data serially (received data will be transmitted wirelessly by Bluetooth module).
-
-6.  State: It tells whether module is connected or not.
 
