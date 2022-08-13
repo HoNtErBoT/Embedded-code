@@ -1,3 +1,5 @@
+# Serial Communication
+
 Serial communication and debugging are essential to working with Arduino boards. 
 The serial communication is used for communication between the Arduino board and 
 a computer or other devices. Every Arduino board has at least one serial port,
