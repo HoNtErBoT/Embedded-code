@@ -1,3 +1,9 @@
+# Arduino Bluetooth Interface
+
+
+Bluetooth is a technology standard used to enable short-range wireless communication between electronic devices. Since Bluetooth operates on radio frequencies, rather than the infrared spectrum used by traditional remote controls, devices using this technology do not have to maintain a line of sight to communicate.
+
+
 
 
 HC-05 is a Bluetooth module which is designed for wireless comunication.This HC05 bluetooth serial module, 
