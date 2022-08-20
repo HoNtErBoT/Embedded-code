@@ -17,5 +17,5 @@ In a Full Duplex mode, The sender and receiver can transmit and receive at the s
 
 ### What is serial communication in Arduino
 
-In Arduino Uno, **Pin 0** and **Pin 1** are assigned for the serial communication known as **UART** (Universal Asynchronous Receiver Transmitter) and **USART** (Universal Synchronous Asynchronous Receiver Transmitter).These pins are operated at 3.3 volts or 5 volts so it is not recommended to connect them with the RS232 serial port because it is operated at 12 volts which can harm the Arduino board, moreover, the serial communication can also be done with a computer through the USB plug.
+In Arduino Uno, **Pin 0** and **Pin 1** are assigned for the serial communication known as **USART** (Universal Synchronous Asynchronous Receiver Transmitter).These pins are operated at 3.3 volts or 5 volts so it is not recommended to connect them with the RS232 serial port because it is operated at 12 volts which can harm the Arduino board, moreover, the serial communication can also be done with a computer through the USB plug.
 
