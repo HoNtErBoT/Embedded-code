@@ -19,3 +19,4 @@ In a Full Duplex mode, The sender and receiver can transmit and receive at the s
 
 In Arduino Uno, **Pin 0** and **Pin 1** are assigned for the serial communication known as **USART** (Universal Synchronous Asynchronous Receiver Transmitter).These pins are operated at 3.3 volts or 5 volts so it is not recommended to connect them with the RS232 serial port because it is operated at 12 volts which can harm the Arduino board, moreover, the serial communication can also be done with a computer through the USB plug.
 
+Here in arduino uno with the help of UART we can interface several devices such as GPS, GSM, RFID, sensors, etc. In an electronic system/device we need to communicate a micro controller with varity of sensors,devices and other microcontrollers, for this we use several communication protocols such as RS232, SPI, I2C, CAN etc.Basically, a protocol is a set of rules agreed by both, the sender and the receiver, on that system
