@@ -35,6 +35,8 @@ If we dont have a monitor,keyboard and mouse for our raspberrypi then these opti
 
 ##    Step-4  -> Choose storage and write OS into memory card
 <br>
+Finally we have to choose a storage location to write OS in to the system, generally we use a class-10 (high speed memory card).
+<br><br>
 
 ![image](https://user-images.githubusercontent.com/109785046/187015749-80232e74-1905-4de7-9c71-637031d1000d.png)
 
