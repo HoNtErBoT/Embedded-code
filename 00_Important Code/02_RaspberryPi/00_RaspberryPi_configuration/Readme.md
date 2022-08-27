@@ -26,9 +26,19 @@ from the list we can select lots of os depending on our need
 <br>
 
 
-
 ##    Step-3  -> Configure advanced options in Raspberry Pi Imager
+<br>
+If we dont have a monitor,keyboard and mouse for our raspberrypi then these options will help us to configure SSH and WiFi connection during OS installation. Here from the settings we can choose nesessory tab to configure advanced settings on rasbian
+<br><br>
 
+![image](https://user-images.githubusercontent.com/109785046/187014556-b550a7f5-b4f1-430a-99e2-306382e3f9fa.png)
+
+##    Step-4  -> Choose storage and write OS into memory card
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/187015749-80232e74-1905-4de7-9c71-637031d1000d.png)
+
+<br><br>
 ### 2) How to check RAM size of RaspberryPi
 
 Entering the following command on RaspberryPi terminal we can find the RAM size Of RaspberryPi<br>
