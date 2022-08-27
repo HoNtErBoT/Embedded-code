@@ -21,13 +21,13 @@ In Arduino Uno, **Pin 0** and **Pin 1** are assigned for the serial communicatio
 
 Here in arduino uno with the help of UART we can interface several devices such as GPS, GSM, RFID, sensors, etc. In an electronic system/device we need to communicate a micro controller with varity of sensors,devices and other microcontrollers, for this we use several communication protocols such as RS232, SPI, I2C, CAN etc.Basically, a protocol is a set of rules agreed by both, the sender and the receiver, on that system
 
-## serial communication in Arduino
-
+## Serial communication in Arduino
+<br><br>
 ![image](https://user-images.githubusercontent.com/109785046/187011550-34c9b158-5232-455c-b58a-4ced15752e24.png)
 
 
-
-### serial communication in Arduino Code
+<br><br>
+## Serial communication in Arduino Code
 
 <pre>
 <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font>
@@ -57,5 +57,8 @@ Here in arduino uno with the help of UART we can interface several devices such 
 <font color="#000000">}</font>
 
 </pre>
-
+<br><br>
+## Serial communication in Arduino circuit
+<br><br>
+![image](https://user-images.githubusercontent.com/109785046/187017413-7d51f9f9-9d05-4744-90a1-3f3b9583dd29.png)
 
