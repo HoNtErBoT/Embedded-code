@@ -1,12 +1,12 @@
-# Servo moto with Arduino
+# Servo motor with Arduino
 
 
-A servomotor (or servo motor) is a rotary actuator or linear actuator that 
+A servo motor (or servo motor) is a rotary actuator or linear actuator that 
 allows for precise control of angular or linear position, velocity and acceleration. 
 It consists of a suitable motor coupled to a sensor for position feedback.
 
 
-## Servo moto with Arduino code
+## Servo motor with Arduino code
 
 <br>
 
