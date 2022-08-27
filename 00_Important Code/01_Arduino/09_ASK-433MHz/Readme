@@ -1,6 +1,0 @@
-      ASK-433Mhz
-      ----------
-
-This module comes in two parts, the first one is transmitter ( Tx ) part and the other is Receiver ( Rx ) part. 
-The RF ( radio frequency ) module always works in pair to transmit and receive data. The transmitter module 
-transmit the encoded data and the receiver module receives it. So the data can only be sent from one end to other end. 
