@@ -1,7 +1,0 @@
-PCF8574
-
-The PCF8574 is an I2C device,used to get 8-pot parallel bus IO expansion. 
-It provides GPIO expansion for many microcontrollers in a simple and 
-cost-effective method. The interface for this IC is I2C (or I2C) using SDA (Data)
-and SCL (Clock) lines. So, if your microcontroller has a limited number of IO 
-pins and has I2C capability, then you can use this IC to expand the IO pins.
