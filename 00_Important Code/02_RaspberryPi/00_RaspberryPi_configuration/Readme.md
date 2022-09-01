@@ -1,4 +1,4 @@
-# RaspberryPi configuration
+# RaspberryPi OS installation
 We have to install an operating on raspberryPi before start using it, we can install lots of operating system on raspberrypi depending on our requirement.Here we are discussing how to install a rasbian(offecial) OS in to RaspberryPi  
 
 
