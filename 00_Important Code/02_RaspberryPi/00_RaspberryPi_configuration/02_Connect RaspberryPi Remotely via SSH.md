@@ -44,7 +44,22 @@ we can download **putty** from the following link (https://www.putty.org/)
 
 <br>
 
+Open putty and enter IP Address got from Angry IP Scanner in Hot name section and click open
+
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/109785046/188056709-18a51324-e63c-4703-aa89-45518dfb461b.png)
+
+<br>
+
+default username : pi<br>
+default password : raspberry
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188081445-a9544db5-1345-4b2e-8913-628de0cfdcab.png)
+
 
 
 
