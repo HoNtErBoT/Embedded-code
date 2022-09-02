@@ -76,6 +76,28 @@ To get IP Address Open terminal Enter command **"ifconfig"**
 
 <br>
 
+## Enable SSH
+
+<br>
+
+To start SSH connection with RaspberryPi we have to first enable SSH, for that Open Terminal -> **ifconfig** -> Select Interfacing Option
+
+<br>
+
+Sometimes user doesnot have sudo permission, so to add sudo permission, follw the steps. 
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188088248-7c74ab3f-6aab-41aa-bb6e-a9458141a08b.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188095890-85468db1-1a6a-45b0-ae9c-f11e89cbc379.png)
+
+
+
+
+
 
 
 
