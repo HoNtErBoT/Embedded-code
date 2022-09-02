@@ -1,10 +1,14 @@
 # Connect RaspberryPi Remotely via SSH
 
+<br>
+
+To establish an SSH connection with RaspberryPi in a local network, we have to know the ip address of raspberryPi, to find the ip address we can use a software named **Angry IP Scanner**, after getting IP address we can connect to RaspberryPi for that we can use an another software named **putty**
+
 ## Download Angry IP Scanner
 
 <br>
 
-To connect RaspberryPi remotely via SSH, we have to know the IP address of RaspberryPi. To find the IP address we can use **Angry IP Scanner**,Download Angry IP Scanne from the following link(https://angryip.org/download/#google_vignette)
+we can download **Angry IP Scanner** from the following link (https://angryip.org/download/#google_vignette)
 
 <br>
 
@@ -16,8 +20,27 @@ To connect RaspberryPi remotely via SSH, we have to know the IP address of Raspb
 
 <br>
 
-Open Angry IP Scanner and find the IP address of RaspberryPi 
+Open Angry IP Scanner and find the IP address of RaspberryPi in our local network by clicking **start** on IP scanner
 
 <br>
 
 ![image](https://user-images.githubusercontent.com/109785046/188049100-7e9a93c7-4f39-44d8-a9d9-afcb90217619.png)
+
+<br>
+
+## Download putty
+
+<br>
+
+we can download **putty** from the following link (https://www.putty.org/)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188053822-1404e4f9-8adb-4f12-a42f-6322566060ae.png)
+
+<br>
+
+
+
+
+
