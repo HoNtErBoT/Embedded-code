@@ -40,6 +40,13 @@ we can download **putty** from the following link (https://www.putty.org/)
 
 <br>
 
+## Open putty
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188056709-18a51324-e63c-4703-aa89-45518dfb461b.png)
+
+
 
 
 
