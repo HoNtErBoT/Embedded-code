@@ -60,6 +60,22 @@ default password : raspberry
 
 ![image](https://user-images.githubusercontent.com/109785046/188081445-a9544db5-1345-4b2e-8913-628de0cfdcab.png)
 
+<br>
+
+## Get IP Address of RaspberryPi
+
+<br>
+
+To get IP Address Open terminal Enter command **"ifconfig"**
+
+
+<br>
+
+![image](https://user-images.githubusercontent.com/109785046/188083750-2ddd1b14-c823-4ad1-b4e8-63eadfe0547e.png)
+
+
+<br>
+
 
 
 
