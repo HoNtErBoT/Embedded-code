@@ -82,5 +82,8 @@ It includes a feature-rich editor, source-level debugger, project manager, softw
 </pre>
 
 
+# Circuit diagram
+
+![image](https://user-images.githubusercontent.com/109785046/204072067-925bffa6-54ee-4109-8247-17cecfa1205d.png)
 
 
