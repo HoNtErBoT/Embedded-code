@@ -1,5 +1,8 @@
 # LED BLINK 16F877a MPLAB X IDE
 
+![image](https://user-images.githubusercontent.com/109785046/204211470-a03d01de-debf-4e46-b624-bea572ecb850.png)
+
+
 PIC 16F877a has normally five input/output ports. They are used for the input/output interfacing with other devices/circuits. Most of these port pins are multiplexed for handling alternate function for peripheral features on the devices. All ports in a PIC chip are bi-directional.
 
 ## PORT A and the TRIS A Registers
