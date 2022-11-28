@@ -15,6 +15,10 @@ Other PORT A pins in this microcontroller multiplexed with analog inputs and the
 
 PORT B is also an 8 bit bi-directional PORT. Its direction controlled and maintained by TRIS B data direction register. Setting the TRIS B into logic ‘1’ makes the corresponding   “PORT B” pin as an input. Clearing the TRIS B bit make PORT B as an output. Three pins of PORT B are multiplexed with the In-Circuit Debugger and Low-Voltage Programming function: RB3/PGM, RB6/PGC and RB7/PGD for performing its alternate functions.
 
+![image](https://user-images.githubusercontent.com/109785046/204201427-dd473ef2-c7b2-4454-ab7a-af2b4aa5a082.png)
+![image](https://user-images.githubusercontent.com/109785046/204204616-2f8787c8-bd22-4c20-9339-0fdd04ec0a2b.png)
+
+
 ## PORT C and the TRIS C Registers
 ![image](https://user-images.githubusercontent.com/109785046/204200342-124deb24-d802-4cb4-b0d7-00bc55420cd8.png)
 
