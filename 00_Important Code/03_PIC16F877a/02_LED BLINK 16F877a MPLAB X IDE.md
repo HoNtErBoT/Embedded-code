@@ -25,13 +25,22 @@ PORT B is also an 8 bit bi-directional PORT. Its direction controlled and mainta
 PORT C is an 8-bit wide, bidirectional PORT which controlled and maintained by TRIS C data direction register. Setting a TRIS C bit (= 1) will make the corresponding PORT C pin an input (i.e., put the corresponding output driver in a High-Impedance mode). Clearing a TRIS C bit (= 0) will make the corresponding PORT C pin an output PORT C is also multiplexed with several peripheral functions. PORT C pins have Schmitt Trigger input buffers.
 When enabling peripheral functions, more care should be taken in defining TRIS bits for each PORT C pin as compared to other. Some peripherals override the TRIS bit to make a pin an output, while other peripherals override the TRIS bit to make a pin an input. Since the TRIS bit override is in effect while the peripheral is enabled, read-modify write instructions (BSF, BCF, and XORWF) with TRISC as the destination, should be avoided. The user should refer to the corresponding peripheral section for the correct TRIS bit settings.
 
+![image](https://user-images.githubusercontent.com/109785046/204205068-68b29be7-b74c-4906-bbfc-9d05d1cf3dab.png)
+
+
 ## PORT D and TRIS D Registers
 ![image](https://user-images.githubusercontent.com/109785046/204200550-2e191569-e549-4b80-be6e-54edac8e739a.png)
 
 PORT D is an 8-bit PORT with bi-directional nature. This port also with Schmitt Trigger input buffers, each pin in this PORT D individually configurable as either input or output. PORT D can be configured as an 8-bit wide microprocessor PORT (functioning as Parallel Slave PORT) by setting control bit, PSPMODE ((TRISE<4>). In this mode, the input buffers are TTL.
+
+![image](https://user-images.githubusercontent.com/109785046/204205174-5a2a821d-3f32-42ea-908a-adef69832049.png)
+
 
 ## PORT E and TRIS E Registers
 ![image](https://user-images.githubusercontent.com/109785046/204200852-ee60e994-1e46-496a-ac21-11cf876d6c53.png)
 
 PORT E has only three pins (RE0/RD/AN5, RE1/WR/AN6 and RE2/CS/AN7) which are individually configurable as inputs or outputs. These pins controllable by using its corresponding data direction register “TRIS E”. These pins also have Schmitt Trigger input buffers. The PORT E pins become the I/O control inputs for the microprocessor PORT when bit PSPMODE is set. In this mode, the user must make certain that the TRIS E bits are set and that the pins are configured as digital inputs. Also, ensure that ADCON1 is configured for digital I/O. In this mode, the input buffers are TTL.
 TRISE register which also controls the Parallel Slave PORT operation. PORT E pins are multiplexed with analog inputs. When selected for analog input, these pins will read as ‘0’s. TRIS E controls the direction of the RE pins, even when they are being used as analog inputs. The user must make sure to keep the pins configured as inputs when using them as analog inputs.
+
+![image](https://user-images.githubusercontent.com/109785046/204205264-40e93fa9-10c0-4b9e-b836-40f07f87bfde.png)
+
