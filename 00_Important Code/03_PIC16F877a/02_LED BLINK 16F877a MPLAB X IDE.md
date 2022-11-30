@@ -1,4 +1,4 @@
-# LED BLINK 16F877a MPLAB X IDE
+# PIC 16F877a PORT's
 
 ![image](https://user-images.githubusercontent.com/109785046/204212425-12f5682d-9019-41af-a36c-dc1da94d7377.png)
 
@@ -45,4 +45,44 @@ PORT E has only three pins (RE0/RD/AN5, RE1/WR/AN6 and RE2/CS/AN7) which are ind
 TRISE register which also controls the Parallel Slave PORT operation. PORT E pins are multiplexed with analog inputs. When selected for analog input, these pins will read as ‘0’s. TRIS E controls the direction of the RE pins, even when they are being used as analog inputs. The user must make sure to keep the pins configured as inputs when using them as analog inputs.
 
 ![image](https://user-images.githubusercontent.com/109785046/204205264-40e93fa9-10c0-4b9e-b836-40f07f87bfde.png)
+
+## LED Blink Code
+
+<pre>
+<font color="#95a5a6">&#47;*</font>
+<font color="#95a5a6"> * File &nbsp;: &nbsp;&nbsp;main.c</font>
+<font color="#95a5a6"> * Author: &nbsp;&nbsp;Rajeev TR</font>
+<font color="#95a5a6"> * Title : &nbsp;&nbsp;LED Blink</font>
+<font color="#95a5a6"> *&#47;</font>
+
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">htc</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+<font color="#434f54">&#47;&#47; Configuration word for PIC16F877A</font>
+<font color="#000000">__CONFIG</font><font color="#000000">(</font> <font color="#000000">FOSC_HS</font> <font color="#434f54">&amp;</font> <font color="#000000">WDTE_OFF</font> <font color="#434f54">&amp;</font> <font color="#000000">PWRTE_ON</font> <font color="#434f54">&amp;</font> <font color="#000000">CP_OFF</font> <font color="#434f54">&amp;</font> <font color="#000000">BOREN_ON</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&amp;</font> <font color="#000000">LVP_OFF</font> <font color="#434f54">&amp;</font> <font color="#000000">CPD_OFF</font> <font color="#434f54">&amp;</font> <font color="#000000">WRT_OFF</font> <font color="#434f54">&amp;</font> <font color="#000000">DEBUG_OFF</font><font color="#000000">)</font><font color="#000000">;</font>
+
+<font color="#5e6d03">#define</font> <font color="#000000">LED</font> &nbsp;<font color="#000000">RB0</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Define LED pin as RB0</font>
+<font color="#5e6d03">#define</font> <font color="#000000">_XTAL_FREQ</font> &nbsp;&nbsp;<font color="#000000">20000000</font> &nbsp;<font color="#434f54">&#47;&#47; Define CPU Frequency</font>
+
+
+<font color="#00979c">void</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#00979c">void</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;<font color="#000000">TRISB0</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Make RB0 pin output</font>
+ &nbsp;<font color="#000000">LED</font> &nbsp;&nbsp;&nbsp;<font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Make RB0 low</font>
+ &nbsp;
+ &nbsp;<font color="#5e6d03">while</font><font color="#000000">(</font><font color="#000000">1</font><font color="#000000">)</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">__delay_ms</font><font color="#000000">(</font><font color="#000000">500</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Half sec delay</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">LED</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; LED off</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">__delay_ms</font><font color="#000000">(</font><font color="#000000">500</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Half sec delay</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">LED</font> <font color="#434f54">=</font> <font color="#000000">1</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; LED on</font>
+ &nbsp;<font color="#000000">}</font>
+<font color="#000000">}</font>
+
+</pre>
+
+## LED Blink Circuit
+
+![image](https://user-images.githubusercontent.com/109785046/204692980-b66ab419-26f7-4a4d-b28e-7945766ce0e9.png)
+
 
