@@ -48,7 +48,7 @@ It includes a feature-rich editor, source-level debugger, project manager, softw
 - Write your first program
 ![image](https://user-images.githubusercontent.com/109785046/204071455-40ae7806-96f6-4df1-9458-82b1f260c7e7.png)
 
-#  PORT BLINK CODE
+#  Firmware for PORT BLINK in 16f877a
 
 <pre>
 <font color="#95a5a6">&#47;*</font>
