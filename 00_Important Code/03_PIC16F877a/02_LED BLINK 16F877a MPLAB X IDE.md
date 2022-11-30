@@ -46,7 +46,7 @@ TRISE register which also controls the Parallel Slave PORT operation. PORT E pin
 
 ![image](https://user-images.githubusercontent.com/109785046/204205264-40e93fa9-10c0-4b9e-b836-40f07f87bfde.png)
 
-## LED Blink Code
+## Firmware for LED Blink in 16f877a
 
 <pre>
 <font color="#95a5a6">&#47;*</font>
