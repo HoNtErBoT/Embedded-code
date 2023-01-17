@@ -42,3 +42,11 @@ The LPC2141/42/44/46/48 microcontrollers are based on a 16-bit/32-bit ARM7TDMI-S
 - Individual enables/disable peripheral functions as well as peripheral clock scaling for additional power optimization.
 - Processor wake-up from Power-down mode via external interrupt or BOD.
 - Single power supply chip with POR and BOD circuits CPU operating voltage range of 3.0 V to 3.6 V (3.3 V ± 10 %) with 5 V tolerant I/O pads.
+
+# Create new project in Keil
+
+
+
+
+https://user-images.githubusercontent.com/109785046/212834850-13dc148f-12ee-49ef-8471-f7ebcd208a6f.mp4
+
