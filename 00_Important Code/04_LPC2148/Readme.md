@@ -11,5 +11,28 @@ Due to their low costs, minimal power consumption, and lower heat generation tha
 
 
 
+# LPC2148
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width: 10% src="https://user-images.githubusercontent.com/109785046/212825207-80fa4817-15b5-4abb-8071-f33b6d637224.png" alt="Material Bread logo" align="center">
+</p>
 
+The LPC2141/42/44/46/48 microcontrollers are based on a 16-bit/32-bit ARM7TDMI-S CPU with real-time emulation and embedded trace support, that combine the microcontroller with embedded high-speed flash memory ranging from 32 kB to 512 kB. A 128-bit wide memory interface and unique accelerator architecture enable 32-bit code execution at the maximum clock rate. For critical code size applications, the alternative 16-bit Thumb mode reduces code by more than 30 % with a minimal performance penalty. Due to their tiny size and low power consumption, LPC2141/42/44/46/48 are ideal for applications where miniaturization is a key requirement, such as access control and point-of-sale. Serial communications interfaces ranging from a USB 2.0 Full-speed device, multiple UARTs, SPI, SSP to I2C-bus and on-chip SRAM of 8 kB up to 40 kB, make these devices very well suited for communication gateways and protocol converters, soft modems, voice recognition, and low-end imaging, providing both large buffer size and high processing power. Various 32-bit timers, single or dual 10-bit ADC(s), 10-bit DAC, PWM channels, and 45 fast GPIO lines with up to nine edge or level sensitive external interrupt pins make these microcontrollers suitable for industrial control and medical systems.
+
+# Features
+
+- 16-bit/32-bit ARM7TDMI-S microcontroller in a tiny LQFP64 package.
+
+- 8 kB to 40 kB of on-chip static RAM and 32 kB to 512 kB of on-chip flash memory.128-bit wide interface/accelerator enables high-speed 60 MHz operations.
+
+- In-System Programming/In-Application Programming (ISP/IAP) via on-chip boot loader software.
+
+- Single flash sector or full chip erase in 400 ms and programming of 256 bytes in 1 ms.
+
+- Embedded ICE RT and Embedded Trace interfaces offer real-time debugging with the on-chip Real Monitor software and high-speed tracing of instruction execution.
+
+- USB 2.0 Full-speed compliant device controller with 2 kB of endpoint RAM. In addition, the LPC2146/48 provides 8 kB of on-chip RAM accessible to USB by DMA.
+
+- One or two (LPC2141/42 vs. LPC2144/46/48) 10-bit ADCs provide a total of 6/14 analog inputs, with conversion times as low as 2.44 μs per channel.
+
+- Single 10-bit DAC provides variable analog output (LPC2142/44/46/48 only).
