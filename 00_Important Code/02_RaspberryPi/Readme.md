@@ -9,11 +9,8 @@ Raspberrypi is a tiny Board Support Package(BSP) that can be used as dual-displa
 </p>
 
 
-
- 01_RaspberryPi OS installation =>  https://github.com/HoNtErBoT/Embedded-code/blob/main/00_Important%20Code/02_RaspberryPi/00_RaspberryPi_configuration/01_RaspberryPi%20OS%20installation.md
- 
-
-02_Connect RaspberryPi Remotely via SSH  =>  https://github.com/HoNtErBoT/Embedded-code/blob/main/00_Important%20Code/02_RaspberryPi/00_RaspberryPi_configuration/02_Connect%20RaspberryPi%20Remotely%20via%20SSH.md
+- <p><a href="https://github.com/HoNtErBoT/Embedded-code/blob/main/00_Important%20Code/02_RaspberryPi/00_RaspberryPi_configuration/01_RaspberryPi%20OS%20installation.md">01_RaspberryPi OS installation</a></p>
+- <p><a href="https://github.com/HoNtErBoT/Embedded-code/blob/main/00_Important%20Code/02_RaspberryPi/00_RaspberryPi_configuration/02_Connect%20RaspberryPi%20Remotely%20via%20SSH.md">02_Connect RaspberryPi Remotely via SSH</a></p>
 
 
 
