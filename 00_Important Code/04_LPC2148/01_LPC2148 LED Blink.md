@@ -27,6 +27,27 @@ At any point of operation, each pin can have a single function and the function 
 
 The configuration register is called PINSEL and is classified in to three registers: PINSEL0, PINSEL1 and PINSEL2. These configuration registers are of 32-bit wide. Any pin on the LPC2148 can have a maximum of 4 functions. Hence in order to select one of the four functions, two corresponding bits of the PINSEL register are needed. So, a 32-bit PINSEL register can control 16 pins with 2-bits to control each pin.
 
-PINSEL0 controls PORT0 pins P0.0 to P0.15, PINSEL1 controls PORT0 pins P0.16 to P0.31 and PINSEL2 controls PORT1 pins P1.16 to P1.31.
+PINSEL0 controls PORT0 pins P0.0 to P0.15, PINSEL1 controls PORT0 pins P0.16 to P0.31 and PINSEL2 controls PORT1 pins P1.16 to P1.31.The following table shows the PINSEL0 and corresponding functions on the PORT0.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img src="https://user-images.githubusercontent.com/109785046/213102094-259b781d-3705-4cc6-a6b0-b91e1b637fe0.png" alt="Material Bread logo" align="center">
+</p>
+
+The default function of all the Pins is GPIO. But it is a good programming practice to mention “PINSEL0=0” in order to select the GPIO function of the Pins.GPIO function is the most frequently used functionality of the microcontroller. The GPIO function in both the Ports are controlled by a set of 4 registers: IOPIN, IODIR, IOSET and IOCLR.
+- **IOPIN**: It is a GPIO Port Pin Value register and can be used to read or write values directly to the pin. The status of the Pins that are configured as GPIO can always be read from this register irrespective of the direction set on the pin (Input or Output).
+
+The syntax for this register is IOxPIN, where ‘x’ is the port number i.e. IO0PIN for PORT0 and IO1PIN for PORT1.
+
+- **IODIR**: It is a GPIO Port Direction Control register and is used to set the direction i.e. either input or output of individual pins. When a bit in this register is set to ‘0’, the corresponding pin in the microcontroller is configured as Input. Similarly, when a bit is set as ‘1’, the corresponding pin is configured as Output.
+
+The syntax for this register is IOxDIR, where ‘x’ is the port number i.e. IO0DIR for PORT0 and IO1DIR for PORT1.
+
+- **IOSET**: It is a GPIO Port Output Set Register and can be used to set the value of a GPIO pin that is configured as output to High (Logic 1). When a bit in the IOSET register is set to ‘1’, the corresponding pin is set to Logic 1. Setting a bit ‘0’ in this register has no effect on the pin.
+
+The syntax for this register is IOxSET, where ‘x’ is the port number i.e. IO0SET for PORT0 and IO1SET for PORT1.
+
+- **IOCLR**: It is a GPIO Port Output Clear Register and can be used to set the value of a GPIO pin that is configured as output to Low (Logic 0). When a bit in the IOCLR register is set to ‘1’, the corresponding pin in the respective Port is set to Logic 0 and at the same time clears the corresponding bit in the IOSET register. Setting ‘0’ in the IOCLR has no effect on the pin.
+
+The syntax for this register is IOxCLR, where ‘x’ is the port number i.e. IO0CLR for PORT0 and IO1CLR for PORT1.
 
 
