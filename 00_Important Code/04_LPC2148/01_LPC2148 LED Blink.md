@@ -2,6 +2,11 @@
 
 LPC2148 is a 32-bit Microcontroller based on the ARM7TDMI-S Family. It is manufactured by NXP Semiconductors (formerly Philips) and is one of the widely used and highly successful ARM7 based Microcontroller.Even though ARM7 family is considered obsolete with the introduction of many advanced processors and controllers, it is one of the best and easiest microcontrollers to work around for beginners in ARM based microcontrollers.
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img src="https://user-images.githubusercontent.com/109785046/213093311-901dbe5e-fae2-4133-b81f-8096ea8073dc.png" alt="Material Bread logo" align="center">
+</p>
+
+
 ## key features of the LPC2148 microcontroller.
 
 - LPC2148 is a -bit microcontroller based on ARM7 family (ARM7TDMI-S to be specific) and is available in a 64 pin LQFP Package (Low Profile Quad Flat Package).
