@@ -75,7 +75,41 @@ The syntax for this register is IOxCLR, where ‘x’ is the port number i.e. IO
 </pre>
 
 
+# LED Interface
 
+To interface an LED with the LPC2148, you need to use one of the microcontroller's General Purpose Input/Output (GPIO) pins. The LPC2148 has a total of 32 GPIO pins that can be configured as input or output.
+
+Here's a step-by-step guide to connecting an LED to an LPC2148:
+
+- Connect the anode (positive) of the LED to one of the LPC2148's GPIO pins.
+- Connect the cathode (negative) of the LED to the ground.
+- In your software, configure the selected GPIO pin as an output pin.
+- To turn on the LED, set the output of the GPIO pin to a high level (3.3V).
+- To turn off the LED, set the output of the GPIO pin to a low level (0V).
+
+If you want to blink the LED, you can use the LPC2148's built-in timer peripheral and configure it to generate an interrupt at a specific interval. In the interrupt service routine, you can toggle the output of the GPIO pin to blink the LED.
+
+It's important to note that the LPC2148 also has built-in peripheral features like PWM(Pulse Width Modulation) that can be used to control the brightness of the LED. It is also important to keep in mind the current consumption and power dissipation while working with LEDs.
+
+<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">lpc214x</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47; Header file for LPC2148</font>
+<font color="#5e6d03">#define</font> <font color="#000000">LED</font> <font color="#000000">(</font><font color="#000000">1</font><font color="#434f54">&lt;&lt;</font><font color="#000000">1</font><font color="#000000">)</font> &nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; GPIO pin connected to the LED</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#00979c">void</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;<font color="#00979c">int</font> <font color="#000000">i</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Configure the LED pin as output &nbsp;&nbsp;&nbsp;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">IODIR0</font> <font color="#434f54">|=</font> <font color="#000000">LED</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; P0.1 as output</font>
+
+ &nbsp;&nbsp;&nbsp;<font color="#5e6d03">while</font><font color="#000000">(</font><font color="#000000">1</font><font color="#000000">)</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">IOSET0</font> <font color="#434f54">|=</font> <font color="#000000">LED</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Turn on the LED Set P0.1 high &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#5e6d03">for</font><font color="#000000">(</font><font color="#000000">i</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">i</font> <font color="#434f54">&lt;</font> <font color="#000000">100000</font><font color="#000000">;</font> <font color="#000000">i</font><font color="#434f54">++</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Wait for a while</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">IOCLR0</font> <font color="#434f54">|=</font> <font color="#000000">LED</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Turn off the LED Clear P0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#5e6d03">for</font><font color="#000000">(</font><font color="#000000">i</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">i</font> <font color="#434f54">&lt;</font> <font color="#000000">100000</font><font color="#000000">;</font> <font color="#000000">i</font><font color="#434f54">++</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Wait for a while</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+<font color="#000000">}</font>
+
+
+</pre>
 
 
 
