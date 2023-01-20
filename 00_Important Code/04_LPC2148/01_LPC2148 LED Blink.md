@@ -50,4 +50,33 @@ The syntax for this register is IOxSET, where ‘x’ is the port number i.e. IO
 
 The syntax for this register is IOxCLR, where ‘x’ is the port number i.e. IO0CLR for PORT0 and IO1CLR for PORT1.
 
+# LED Interfacing(PORT BLINK) – LPC2148 GPIO Code
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">lpc214x</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">void</font> <font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#00979c">void</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">IO0DIR</font> <font color="#434f54">|=</font><font color="#000000">0XfffffFFF</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Port 0 is now acting as a output pin</font>
+ &nbsp;&nbsp;&nbsp;<font color="#5e6d03">while</font><font color="#000000">(</font><font color="#000000">1</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">IOSET0</font> <font color="#434f54">|=</font><font color="#000000">0XfffffFFF</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Port 0&#39;s all pins are high now (LED is glowing)</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">IOCLR0</font> <font color="#434f54">|=</font><font color="#000000">0XFFFfffff</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Port 0&#39;s all pins are low now (LED is OFF)</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">}</font> &nbsp;&nbsp;
+<font color="#000000">}</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#00979c">void</font> <font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#00979c">unsigned</font> <font color="#00979c">int</font> <font color="#000000">i</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#5e6d03">for</font><font color="#000000">(</font><font color="#000000">i</font><font color="#434f54">=</font><font color="#000000">0</font><font color="#000000">;</font><font color="#000000">i</font><font color="#434f54">&lt;</font><font color="#000000">30000</font><font color="#000000">;</font><font color="#000000">i</font><font color="#434f54">++</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+
+
+
+
+
 
