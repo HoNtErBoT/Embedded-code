@@ -1,2 +1,2 @@
-# intro
-kjghsfiug <br>jhwufywuf fuyg
+# INTRODUCTION TO C PROGRAM
+C is a powerful general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972. It can be used to develop software like operating systems, databases, compilers, and so on. It is a very popular language. At first it was developed to write the UNIX operating system so C is  associated with UNIX. When compared to other programming languages like Java and Python, C is very fast. C++ and C have almost the same syntax because C++ was developed as an extension of C. But C++ support classes and objects, while C does not. 
