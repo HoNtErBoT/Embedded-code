@@ -51,4 +51,17 @@ All programs having a basic structure, which is called as syntsx of that program
 
 **NP:>** Every C statement ends with a semicolon ';'.<br>
    **>** The body of int main() could also been written as:
-<br>int main(){printf("Hello World!");return 0;}
+<br>int main(){printf("Hello World!");return 0;}<br>
+The compiler ignores white spaces. However, multiple lines makes the code more readable.<br><br>
+# C OUTPUT
+To output values or print text in C, you can use the printf() function:<br>
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;hello,HoNtErBoT&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+
+</pre><br>Here we need to get the text  **"hello,HoNtErBoT"** to our output screen ,so we used it in a  **printf**.
