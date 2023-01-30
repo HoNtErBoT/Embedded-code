@@ -79,7 +79,7 @@ Here we need to get the text **\"hello,HoNtErBoT\"** to our output screen ,so we
 ![outputpic2](https://user-images.githubusercontent.com/109785046/215393814-05c9185b-ee32-49b4-b7e5-a0bb81ebf8c4.png)
 <br>Then how can be get a new line ?<br>
  # C NEW LINES
- To insert a new line, we are using the **\n** character, It is called an **escape sequence** , and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
+ To insert a new line, we are using the `\n` character, It is called an **escape sequence** , and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
  <pre>
 <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
 
@@ -93,7 +93,7 @@ Here we need to get the text **\"hello,HoNtErBoT\"** to our output screen ,so we
 
 ![resultpic1](https://user-images.githubusercontent.com/109785046/215395720-2de03135-b6b7-48cc-844f-87e486805dda.png)
 <br>
-We can also output multiple lines with a single printf() function. However, this could make the code harder to read.And also note that **\n** can only be used with in **" "** only.
+We can also output multiple lines with a single printf() function. However, this could make the code harder to read.And also note that `\n` can only be used with in `" "` only.
 <pre>
 <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
 <font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font> 
@@ -109,16 +109,16 @@ We can also output multiple lines with a single printf() function. However, this
 Examples of other valid escape sequences are,
 |**Escape Sequence**    |       **Description**                  |
 |-----------------------|----------------------------------------|
-|         \t	          |       Creates a horizontal tab         |
-|         \\	          |       Inserts a backslash character (\)|
-|         \"	          |       Inserts a double quote character |
+|         `\t`	        |       Creates a horizontal tab         |
+|         `\\`	        |       Inserts a backslash character (\)|
+|         `\"`	        |       Inserts a double quote character |
 
 # C COMMENTS
 Comments can be used to explain code, and to make it more readable. It can also be used to prevent execution when testing alternative code.<br>Comments are two type:<br>
             -1 **singled-lined** <br>
             -2 **multi-lined**
 ## Single-line Comments 
-Single-line comments start with two forward slashes **//**.Any text start with **//** will not be executed.
+Single-line comments start with two forward slashes `//`.Any text start with `//`will not be executed.
 
 <pre>
 <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
@@ -140,7 +140,7 @@ Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line 
 ![comreslt1](https://user-images.githubusercontent.com/109785046/215411035-a85c7c6e-1859-4658-b085-e5c6eab8de36.png)
 
 ## C Multi-line Comments
-Multi-line comments start with **/*** and ends with ***/** .
+ Multi-line comments start with  `/*` and ends with `*/` . Any text between `/*` and `*/`   will be ignored by the compiler.
 
 
 
