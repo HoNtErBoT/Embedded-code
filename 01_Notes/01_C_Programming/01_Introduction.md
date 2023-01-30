@@ -64,4 +64,88 @@ To output values or print text in C, you can use the printf() function:<br>
 <font color="#000000">}</font>
 
 
-</pre><br>Here we need to get the text  **"hello,HoNtErBoT"** to our output screen ,so we used it in a  **printf**.
+</pre>
+<br>
+Here we need to get the text **\"hello,HoNtErBoT\"** to our output screen ,so we used it in a **printf**.<br>We can use  many printf() functions in our program. However, note that it does not insert a new line at the end of the output. Look at the given code and its result.<br>
+<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;Hello World!&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;I am learning C.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+</pre>
+![outputpic2](https://user-images.githubusercontent.com/109785046/215393814-05c9185b-ee32-49b4-b7e5-a0bb81ebf8c4.png)
+<br>Then how can be get a new line ?<br>
+ # C NEW LINES
+ To insert a new line, we are using the **\n** character, It is called an **escape sequence** , and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
+ <pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;Hello World!\n&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;I am learning C.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![resultpic1](https://user-images.githubusercontent.com/109785046/215395720-2de03135-b6b7-48cc-844f-87e486805dda.png)
+<br>
+We can also output multiple lines with a single printf() function. However, this could make the code harder to read.And also note that **\n** can only be used with in **" "** only.
+<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font> 
+<font color="#000000">{</font>
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;Hello World!\nI am learning C.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![resultpic2](https://user-images.githubusercontent.com/109785046/215396755-d5a8f011-54b4-43af-ba9a-313c024d24f4.png)
+
+Examples of other valid escape sequences are,
+|**Escape Sequence**    |       **Description**                  |
+|-----------------------|----------------------------------------|
+|         \t	          |       Creates a horizontal tab         |
+|         \\	          |       Inserts a backslash character (\)|
+|         \"	          |       Inserts a double quote character |
+
+# C COMMENTS
+Comments can be used to explain code, and to make it more readable. It can also be used to prevent execution when testing alternative code.<br>Comments are two type:<br>
+            -1 **singled-lined** <br>
+            -2 **multi-lined**
+## Single-line Comments 
+Single-line comments start with two forward slashes **//**.Any text start with **//** will not be executed.
+
+<pre>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font> 
+<font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47;printf(&#34;Hello ,HoNtErBoT!\n&#34;);</font>
+ &nbsp;
+ &nbsp;<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;I am learning C.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![comment1](https://user-images.githubusercontent.com/109785046/215410334-c075e670-dfaa-4090-bb66-e462d613503c.png)
+
+Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line ,and it will not executed.
+
+![comreslt1](https://user-images.githubusercontent.com/109785046/215411035-a85c7c6e-1859-4658-b085-e5c6eab8de36.png)
+
+## C Multi-line Comments
+Multi-line comments start with **/*** and ends with ***/** .
+
+
+
+            
+    
+
+
+
