@@ -1,12 +1,16 @@
-// Plat form IO Code
+/*
+        Rajeev TR
+        UDP Transmission and Recption code
+
+*/
 
 
 # include <WiFi.h>
 # include <WiFiUdp.h>
 # include <WebServer.h>
 
-# define SSID "Embedded"
-# define PSWD "Embedded54321"
+# define SSID "Embedded"                 // Wi-Fi User Name
+# define PSWD "Embedded54321"            // Wi-Fi Password
 
 WiFiUDP udp;
 /**********************************************************/
