@@ -143,7 +143,11 @@ Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line 
  Multi-line comments start with  `/*` and ends with `*/` . Any text between `/*` and `*/`   will be ignored by the compiler.
 ## C Variables
 Variables are containers to store values like numbers and characters.
-
+There are different types of variables with different keywords
+            -1 **int** <br>
+            -2 **float** <br>
+            -3 **char**<br>
+            
 
             
     
