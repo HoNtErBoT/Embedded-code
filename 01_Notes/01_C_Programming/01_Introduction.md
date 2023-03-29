@@ -144,12 +144,95 @@ Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line 
 ## C Variables
 Variables are containers to store values like numbers and characters.
 There are different types of variables with different keywords ,<br>
-            <br />-1 **int** <br>
+            -1 **int** <br>
             -2 **float** <br>
             -3 **char**<br>
-            
+# Declare or Create a Variable  
+To declare or create a variable specify the type and assign a value to the variable<br>
+**syntax**<br>
+`type variable name=value;`
+<br>where type is one of the types in c such as **int** or **float** or **char** , variable name is the name given to our variable like **x** or **roll number** or **my name** and the equal sign used to assign a value to our variable .
+<br>for example , if we need to create a variable to store on integer number<br>
+`int n=10;`<br>
+here we created a variable named **n**and its type is `int` assigned a value **10**.<br>We can also declare a variable without assigning value,we can assign value later<br>
+<pre>
+<font color="#00979c">int</font> <font color="#000000">n</font><font color="#000000">;</font><font color="#434f54">&#47;&#47;declare a variable named n</font>
+<font color="#000000">n</font><font color="#434f54">=</font><font color="#000000">10</font><font color="#000000">;</font><font color="#434f54">&#47;&#47;assigning a value</font>
 
-            
+</pre>
+## Output Variables
+we already know that we can output or print text using `printf("");`function.However it is not possible to print a value in a variable using the `printf()` only ie,<br>
+<pre>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Nothing happens</font>
+
+</pre>
+
+ To output variables in C, you must get familiar with something called "format specifiers".<br>
+ ## Format Specifiers
+ Format specifiers are used together with the printf() function to tell the compiler what type of data the variable is storing. It is basically a placeholder for the variable value.A format specifier starts with a percentage sign %, followed by a character.<br>
+For example, to output the value of an int variable, you must use the format specifier %d or %i surrounded by double quotes, inside the printf() function:
+ 
+<pre>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Outputs 15</font>
+
+</pre>
+To print other types, use %c for char and %f for float:
+
+<pre>
+<font color="#434f54">&#47;&#47; Create variables</font>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Integer (whole number)</font>
+<font color="#00979c">float</font> <font color="#000000">myFloatNum</font> <font color="#434f54">=</font> <font color="#000000">5.99</font><font color="#000000">;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47; Floating point number</font>
+<font color="#00979c">char</font> <font color="#000000">myLetter</font> <font color="#434f54">=</font> <font color="#00979c">&#39;D&#39;</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Character</font>
+
+<font color="#434f54">&#47;&#47; Print variables</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloatNum</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%c\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myLetter</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+To combine both text and a variable, separate them with a comma inside the printf() function:
+
+<pre>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;My favorite number is: %d&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+To print different types in a single printf() function, you can use the following:
+
+<pre>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+<font color="#00979c">char</font> <font color="#000000">myLetter</font> <font color="#434f54">=</font> <font color="#00979c">&#39;D&#39;</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;My number is %d and my letter is %c&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#434f54">,</font> <font color="#000000">myLetter</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+## Change Variable Values
+ If we assign a new value to an existing variable, it will overwrite the previous value:
+ 
+  <pre>
+<font color="#00979c">int</font> <font color="#000000">n</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; myNum is 15</font>
+<font color="#000000">n</font> <font color="#434f54">=</font> <font color="#000000">10</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Now myNum is 10</font>
+
+</pre>
+
+You can also assign the value of one variable to another:
+
+<pre>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+
+<font color="#00979c">int</font> <font color="#000000">myOtherNum</font> <font color="#434f54">=</font> <font color="#000000">23</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; Assign the value of myOtherNum (23) to myNum</font>
+<font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">myOtherNum</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; myNum is now 23, instead of 15</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
     
 
 
