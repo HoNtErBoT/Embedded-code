@@ -233,7 +233,70 @@ You can also assign the value of one variable to another:
 <font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">myNum</font><font color="#000000">)</font><font color="#000000">;</font>
 
 </pre>
-    
+ 
+ Or copy values to empty variables:
+ 
+ <pre>
+<font color="#434f54">&#47;&#47; Create a variable and assign the value 15 to it</font>
+<font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; Declare a variable without assigning it a value</font>
+<font color="#00979c">int</font> <font color="#000000">myOtherNum</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; Assign the value of myNum to myOtherNum</font>
+<font color="#000000">myOtherNum</font> <font color="#434f54">=</font> <font color="#000000">myNum</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; myOtherNum now has 15 as a value</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">myOtherNum</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+## Declaration of Multiple Variables
+To declare more than one variable of the same type, use a comma-separated list:
+
+<pre>
+<font color="#00979c">int</font> <font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">5</font><font color="#434f54">,</font> <font color="#000000">y</font> <font color="#434f54">=</font> <font color="#000000">6</font><font color="#434f54">,</font> <font color="#000000">z</font> <font color="#434f54">=</font> <font color="#000000">50</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">x</font> <font color="#434f54">+</font> <font color="#000000">y</font> <font color="#434f54">+</font> <font color="#000000">z</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+We can also assign the same value to multiple variables of the same type:
+
+<pre>
+<font color="#00979c">int</font> <font color="#000000">x</font><font color="#434f54">,</font> <font color="#000000">y</font><font color="#434f54">,</font> <font color="#000000">z</font><font color="#000000">;</font>
+<font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">y</font> <font color="#434f54">=</font> <font color="#000000">z</font> <font color="#434f54">=</font> <font color="#000000">50</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">x</font> <font color="#434f54">+</font> <font color="#000000">y</font> <font color="#434f54">+</font> <font color="#000000">z</font><font color="#000000">)</font><font color="#000000">;</font>
+
+</pre>
+
+## C Variable Names
+All C variables must be identified with unique names.These unique names are called identifiers.Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+It is recommended to use descriptive names in order to create understandable and maintainable code:
+
+<pre>
+<font color="#434f54">&#47;&#47; Good</font>
+<font color="#00979c">int</font> <font color="#000000">minutesPerHour</font> <font color="#434f54">=</font> <font color="#000000">60</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; OK, but not so easy to understand what m actually is</font>
+<font color="#00979c">int</font> <font color="#000000">m</font> <font color="#434f54">=</font> <font color="#000000">60</font><font color="#000000">;</font>
+
+</pre>
+
+The general rules for naming variables are:<br>
+
+1)Names can contain letters, digits and underscores.<br>
+2)Names must begin with a letter or an underscore (_).<br>
+3)Names are case sensitive (myVar and myvar are different variables).<br>
+4)Names cannot contain whitespaces or special characters like !, #, %, etc.<br>
+5)Reserved words (such as int) cannot be used as names.<br>
+
+
+
+
+
+
+
+
 
 
 
