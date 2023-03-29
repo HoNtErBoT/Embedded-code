@@ -144,7 +144,7 @@ Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line 
 ## C Variables
 Variables are containers to store values like numbers and characters.
 There are different types of variables with different keywords ,<br>
-            -1 **int** <br>
+            <br />-1 **int** <br>
             -2 **float** <br>
             -3 **char**<br>
             
