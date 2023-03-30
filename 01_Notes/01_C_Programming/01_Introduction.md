@@ -76,7 +76,7 @@ Here we need to get the text **\"hello,HoNtErBoT\"** to our output screen ,so we
  &nbsp;<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
 <font color="#000000">}</font>
 </pre>
-![outputpic2](https://user-images.githubusercontent.com/109785046/215393814-05c9185b-ee32-49b4-b7e5-a0bb81ebf8c4.png)
+![output2](https://user-images.githubusercontent.com/109785046/228718751-c02319c0-a07d-4c31-a68b-1afbb985a78b.png)
 <br>Then how can be get a new line ?<br>
  # C NEW LINES
  To insert a new line, we are using the `\n` character, It is called an **escape sequence** , and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
@@ -91,7 +91,7 @@ Here we need to get the text **\"hello,HoNtErBoT\"** to our output screen ,so we
 
 </pre>
 
-![resultpic1](https://user-images.githubusercontent.com/109785046/215395720-2de03135-b6b7-48cc-844f-87e486805dda.png)
+![resultpic1](https://user-images.githubusercontent.com/109785046/228717963-a9c89fe4-86b1-4ed3-ba42-6df4e1fb26a6.png)
 <br>
 We can also output multiple lines with a single printf() function. However, this could make the code harder to read.And also note that `\n` can only be used with in `" "` only.
 <pre>
@@ -104,7 +104,7 @@ We can also output multiple lines with a single printf() function. However, this
 
 </pre>
 
-![resultpic2](https://user-images.githubusercontent.com/109785046/215396755-d5a8f011-54b4-43af-ba9a-313c024d24f4.png)
+![resultpic2](https://user-images.githubusercontent.com/109785046/228717839-fdcb940c-e6dc-43f0-9d43-ec1d57468bf0.png)
 
 Examples of other valid escape sequences are,
 |**Escape Sequence**    |       **Description**                  |
@@ -133,11 +133,11 @@ Single-line comments start with two forward slashes `//`.Any text start with `//
 
 </pre>
 
-![comment1](https://user-images.githubusercontent.com/109785046/215410334-c075e670-dfaa-4090-bb66-e462d613503c.png)
+![comment1](https://user-images.githubusercontent.com/109785046/228717730-98021338-95dc-40ac-973d-4e68bebd4119.png)
 
 Here the line **"//printf("Hello ,HoNtErBoT!\n");"** is the commented code line ,and it will not executed.
 
-![comreslt1](https://user-images.githubusercontent.com/109785046/215411035-a85c7c6e-1859-4658-b085-e5c6eab8de36.png)
+![comreslt1](https://user-images.githubusercontent.com/109785046/228717558-8bbc5309-e656-4f0b-ac66-d475e8dbe4bf.png)
 
 ## C Multi-line Comments
  Multi-line comments start with  `/*` and ends with `*/` . Any text between `/*` and `*/`   will be ignored by the compiler.
@@ -285,10 +285,90 @@ It is recommended to use descriptive names in order to create understandable and
 The general rules for naming variables are:<br>
 
 1)Names can contain letters, digits and underscores.<br>
-2)Names must begin with a letter or an underscore (_).<br>
+2)Names must begin with a letter or an underscore`_`.<br>
 3)Names are case sensitive (myVar and myvar are different variables).<br>
 4)Names cannot contain whitespaces or special characters like !, #, %, etc.<br>
 5)Reserved words (such as int) cannot be used as names.<br>
+## C Data Types
+The data type specifies the size and type of information the variable will store.
+
+| Data type |    Size     |  Description  |
+|-----------|-------------|---------------|
+|   int     |2 or 4 bytes	|Stores whole numbers, without decimals|
+|float	|4 bytes	|Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits|
+|double|	8 bytes|	Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits|
+|char |	1 byte |	Stores a single character/letter/number, or ASCII values|
+
+## Basic Format Specifiers
+There are different format specifiers for each data type. Here are some of them:<br>
+|Format Specifier|	Data Type|
+|----------------|-----------|
+|%d or %i	|int|	
+|%f |	float	|
+|%lf|	double|	
+|%c	|char	|
+|%s	| Used for strings (text), which you will learn more about in a later chapter|
+
+## Set Decimal Precision
+Wehave probably already noticed that ifwe print a floating point number, the output will show many digits after the decimal point:
+
+![precision1](https://user-images.githubusercontent.com/109785046/228717143-154c10c3-36a1-440a-89c7-bd76abaa146a.png)
+
+If we want to remove the extra zeros (set decimal precision), we can use a dot `.` followed by a number that specifies how many digits that should be shown after the decimal point:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">float</font> <font color="#000000">myFloatNum</font> <font color="#434f54">=</font> <font color="#000000">3.5</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloatNum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Default will show 6 digits after the decimal point</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%.1f\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloatNum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Only show 1 digit</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%.2f\n&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloatNum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Only show 2 digits</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%.4f&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloatNum</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47; Only show 4 digits</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![precision2](https://user-images.githubusercontent.com/109785046/228719684-82c3ad2a-af5c-4423-b9fc-f7f433a7e06c.png)
+
+## C Type Conversion
+Sometimes, we have to convert the value of one data type to another type. This is known as **type conversion**.
+
+For example, if we try to divide two integers, `7` by `2`, you would expect the result to be `3.5`. But since we are working with integers (and not floating-point values), the following example will just output `3`:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">7</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">y</font> <font color="#434f54">=</font> <font color="#000000">2</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">sum</font> <font color="#434f54">=</font> <font color="#000000">7</font> <font color="#434f54">&#47;</font> <font color="#000000">2</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">sum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Outputs 3</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+
+![change1](https://user-images.githubusercontent.com/109785046/228720839-bddce7b9-9a4c-40cb-a925-b18ed580471a.png)
+
+To get the right result, we need to know how **type conversion** works.<br>
+There are two types of conversion in C:<br>
+
+1)**Implicit Conversion (automatically)**<br>
+2)**Explicit Conversion (manually)**<br>
+## Implicit Conversion
+Implicit conversion is done automatically by the compiler when we assign a value of one type to another.
+
+For example, if we assign an `int` value to a `float` type:
+
+
+
+
+
 
 
 
