@@ -364,6 +364,179 @@ There are two types of conversion in C:<br>
 Implicit conversion is done automatically by the compiler when we assign a value of one type to another.
 
 For example, if we assign an `int` value to a `float` type:
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#434f54">&#47;&#47; Automatic conversion: int to float</font>
+<font color="#00979c">float</font> <font color="#000000">myFloat</font> <font color="#434f54">=</font> <font color="#000000">9</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f&#34;</font><font color="#434f54">,</font> <font color="#000000">myFloat</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 9.000000</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+We can see, the compiler automatically converts the int value `9` to a float value of `9.000000`.This can be risky, as we might lose control over specific values in certain situations.
+Especially if it was the other way around - the following example automatically converts the float value `9.99` to an int value of `9`:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#434f54">&#47;&#47; Automatic conversion: float to int</font>
+<font color="#00979c">int</font> <font color="#000000">myInt</font> <font color="#434f54">=</font> <font color="#000000">9.99</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">myInt</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 9</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+ Another example,
+ 
+ <pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">float</font> <font color="#000000">sum</font> <font color="#434f54">=</font> <font color="#000000">5</font> <font color="#434f54">&#47;</font> <font color="#000000">2</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f&#34;</font><font color="#434f54">,</font> <font color="#000000">sum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 2.000000</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+Here the result is `2`,why?  it is because 5 and 2 are still integers in the division.In this case, we need to manually convert the integer values to floating-point values.
+
+## Explicit Conversion
+Explicit conversion is done manually by placing the type in parentheses () in front of the value.
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#434f54">&#47;&#47; Manual conversion: int to float</font>
+<font color="#00979c">float</font> <font color="#000000">sum</font> <font color="#434f54">=</font> <font color="#000000">(</font><font color="#00979c">float</font><font color="#000000">)</font> <font color="#000000">5</font> <font color="#434f54">&#47;</font> <font color="#000000">2</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f&#34;</font><font color="#434f54">,</font> <font color="#000000">sum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 2.500000</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+We can also place the type in front of a variable:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">num1</font> <font color="#434f54">=</font> <font color="#000000">5</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">num2</font> <font color="#434f54">=</font> <font color="#000000">2</font><font color="#000000">;</font>
+<font color="#00979c">float</font> <font color="#000000">sum</font> <font color="#434f54">=</font> <font color="#000000">(</font><font color="#00979c">float</font><font color="#000000">)</font> <font color="#000000">num1</font> <font color="#434f54">&#47;</font> <font color="#000000">num2</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%f&#34;</font><font color="#434f54">,</font> <font color="#000000">sum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 2.500000</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+we can also work decimal precision:
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">num1</font> <font color="#434f54">=</font> <font color="#000000">5</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">num2</font> <font color="#434f54">=</font> <font color="#000000">2</font><font color="#000000">;</font>
+<font color="#00979c">float</font> <font color="#000000">sum</font> <font color="#434f54">=</font> <font color="#000000">(</font><font color="#00979c">float</font><font color="#000000">)</font> <font color="#000000">num1</font> <font color="#434f54">&#47;</font> <font color="#000000">num2</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%.1f&#34;</font><font color="#434f54">,</font> <font color="#000000">sum</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; 2.5</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+## C Constants
+If we don't want others (or ourself) to change existing variable values, we can use the `const` keyword.
+This will declare the variable as "constant", which means unchangeable and read-only:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">const</font> <font color="#00979c">int</font> <font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">15</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; myNum will always be 15</font>
+<font color="#000000">myNum</font> <font color="#434f54">=</font> <font color="#000000">10</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; error: assignment of read-only variable &#39;myNum&#39;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+We should always declare the variable as constant when weu have values that are unlikely to change:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">const</font> <font color="#00979c">int</font> <font color="#000000">minutesPerHour</font> <font color="#434f54">=</font> <font color="#000000">60</font><font color="#000000">;</font>
+<font color="#00979c">const</font> <font color="#00979c">float</font> <font color="#00979c">PI</font> <font color="#434f54">=</font> <font color="#000000">3.14</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+When you declare a constant variable, it must be assigned with a value:
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">const</font> <font color="#00979c">int</font> <font color="#000000">minutesPerHour</font> <font color="#434f54">=</font> <font color="#000000">60</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+The method shown in below programm will not work
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">const</font> <font color="#00979c">int</font> <font color="#000000">minutesPerHour</font><font color="#000000">;</font>
+<font color="#000000">minutesPerHour</font> <font color="#434f54">=</font> <font color="#000000">60</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; error</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+## Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
