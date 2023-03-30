@@ -519,10 +519,23 @@ Arithmetic operators are used to perform common mathematical operations.
 |+|	Addition|	Adds together two values|	x + y|	
 |-|	Subtraction	|Subtracts one value from another|	x - y	|
 |* |	Multiplication|	Multiplies two values	|x * y|	
-|/ |	Division	|Divides one value by another|	x / y	|
+|/|	Division	|Divides one value by another|	x / y	|
 |%|	Modulus|	Returns the division remainder|	x % y	|
 |++|	Increment|	Increases the value of a variable by 1|	++x	|
 |--|	Decrement	|Decreases the value of a variable by 1|	--x|
+
+# Assignment Operators
+Assignment operators are used to assign values to variables.
+In the example given below, we use the assignment operator `=` to assign the value 10 to a variable called x:
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">10</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
 
 
 
