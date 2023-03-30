@@ -537,6 +537,57 @@ In the example given below, we use the assignment operator `=` to assign the val
 
 </pre>
 
+The **addition assignment** operator `+=` adds a value to a variable:
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">10</font><font color="#000000">;</font>
+<font color="#000000">x</font> <font color="#434f54">+=</font> <font color="#000000">5</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font><font color="#000000">x</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![operatoradd](https://user-images.githubusercontent.com/109785046/228759911-ca441fae-b3b1-497f-b4bd-65736947964c.png)
+
+A list of all assignment operators:
+
+|Operator	|Example|	Same As|	
+|---------|-------|--------|
+|=|	x = 5|	x = 5	|
+|+=	|x += 3|	x = x + 3|	
+|-=|	x -= 3|	x = x - 3|	
+|\*=| x \*= 3 |	x = x * 3|	
+|/=|	x /= 3|	x = x / 3	|
+|%=|	x %= 3|	x = x % 3	|
+|&=|	x &= 3|	x = x & 3	|
+| \|=	|x  \|= 3|	x = x \| 3	|
+|^=|	x ^= 3	|x = x ^ 3|	
+|>>=|	x >>= 3	|x = x >> 3	|
+|<<=|	x <<= 3|	x = x << 3|
+
+Comparison Operators
+Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.
+
+The return value of a comparison is either 1 or 0, which means true (1) or false (0). These values are known as Boolean values.
+In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
