@@ -634,7 +634,9 @@ Booleans represent values that are either `true` or `false`.
 # Boolean Variables
 In C, the bool type is not a built-in data type, like int or char.
 
-It was introduced in C99, and you must import the following header file to use it:
+It was introduced in C99, and you must import the following header file to use it:<br>
+`#include <stdbool.h>`<br>
+A boolean variable is declared with the bool keyword and can only take the values true or false:
 
 
 
