@@ -574,7 +574,29 @@ Comparison operators are used to compare two values (or variables). This is impo
 The return value of a comparison is either 1 or 0, which means true (1) or false (0). These values are known as Boolean values.
 In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:
 
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">x</font> <font color="#434f54">=</font> <font color="#000000">5</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">y</font> <font color="#434f54">=</font> <font color="#000000">3</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">x</font> <font color="#434f54">&gt;</font> <font color="#000000">y</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; returns 1 (true) because 5 is greater than 3</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
 
+</pre>
+
+
+A list of all comparison operators:
+
+|Operator	|Name|	Example|
+|---------|----|--------|
+|==	|Equal to|	x == y|	
+|!=|	Not equal	|x != y|	
+|>	|Greater than	|x > y|	
+|<	|Less than|	x < y	|
+|>=|	Greater than or equal to|	x >= y|	
+|<=	|Less than or equal to|	x <= y|
 
 
 
