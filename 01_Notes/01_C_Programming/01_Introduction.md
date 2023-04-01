@@ -598,6 +598,43 @@ A list of all comparison operators:
 |>=|	Greater than or equal to|	x >= y|	
 |<=	|Less than or equal to|	x <= y|
 
+## Logical Operators
+You can also test for true or false values with logical operators.
+Logical operators are used to determine the logic between variables or values:
+
+![table1](https://user-images.githubusercontent.com/109785046/229272277-abf25825-c229-4cf0-8b4c-4a5e9ca40ac3.png)
+## Sizeof Operator
+The memory size (in bytes) of a data type or a variable can be found with the sizeof operator:
+
+<pre>
+<font color="#5e6d03">#include</font><font color="#434f54">&lt;</font><font color="#000000">stdio</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+<font color="#00979c">int</font> <font color="#000000">main</font><font color="#000000">(</font><font color="#000000">)</font>
+<font color="#000000">{</font>
+<font color="#00979c">int</font> <font color="#000000">myInt</font><font color="#000000">;</font>
+<font color="#00979c">float</font> <font color="#000000">myFloat</font><font color="#000000">;</font>
+<font color="#00979c">double</font> <font color="#000000">myDouble</font><font color="#000000">;</font>
+<font color="#00979c">char</font> <font color="#000000">myChar</font><font color="#000000">;</font>
+
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%lu\n&#34;</font><font color="#434f54">,</font> <font color="#00979c">sizeof</font><font color="#000000">(</font><font color="#000000">myInt</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%lu\n&#34;</font><font color="#434f54">,</font> <font color="#00979c">sizeof</font><font color="#000000">(</font><font color="#000000">myFloat</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%lu\n&#34;</font><font color="#434f54">,</font> <font color="#00979c">sizeof</font><font color="#000000">(</font><font color="#000000">myDouble</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%lu\n&#34;</font><font color="#434f54">,</font> <font color="#00979c">sizeof</font><font color="#000000">(</font><font color="#000000">myChar</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#5e6d03">return</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
+
+![size1](https://user-images.githubusercontent.com/109785046/229272339-84dd4635-314d-4b91-a773-00a75a38400d.png)
+
+Note that we use the %lu format specifer to print the result, instead of %d. It is because the compiler expects the sizeof operator to return a long unsigned int (%lu), instead of int (%d). On some computers it might work with %d, but it is safer to use %lu.
+
+## C Booleans
+C has a bool data type, which is known as booleans.
+Booleans represent values that are either `true` or `false`.
+# Boolean Variables
+In C, the bool type is not a built-in data type, like int or char.
+
+It was introduced in C99, and you must import the following header file to use it:
 
 
 
