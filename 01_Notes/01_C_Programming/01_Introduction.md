@@ -636,7 +636,37 @@ In C, the bool type is not a built-in data type, like int or char.
 
 It was introduced in C99, and you must import the following header file to use it:<br>
 `#include <stdbool.h>`<br>
-A boolean variable is declared with the bool keyword and can only take the values true or false:
+A boolean variable is declared with the `bool` keyword and can only take the values **true or false** :
+bool isProgrammingFun = true;<br>
+bool isFishTasty = false;<br>
+Before trying to print the boolean variables, you should know that boolean values are returned as integers:
+
+* 1 (or any other number that is not 0) represents true<br>
+* 0 represents false<br>
+Therefore, you must use the %d format specifier to print a boolean value:<br>
+<pre>
+<font color="#434f54">&#47;&#47; Create boolean variables</font>
+<font color="#00979c">bool</font> <font color="#000000">isProgrammingFun</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font>
+<font color="#00979c">bool</font> <font color="#000000">isFishTasty</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font>
+
+<font color="#434f54">&#47;&#47; Return boolean values</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">isProgrammingFun</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47; Returns 1 (true)</font>
+<font color="#d35400">printf</font><font color="#000000">(</font><font color="#005c5f">&#34;%d&#34;</font><font color="#434f54">,</font> <font color="#000000">isFishTasty</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47; Returns 0 (false)</font>
+
+</pre>
+
+
+## C If ... Else
+# Conditions and If Statements
+You have already learned that C supports the usual logical conditions from mathematics:
+
+* Less than: a < b
+* Less than or equal to: a <= b
+* Greater than: a > b
+* Greater than or equal to: a >= b
+* Equal to a == b
+* Not Equal to: a != b
+
 
 
 
