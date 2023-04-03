@@ -672,7 +672,29 @@ C has the following conditional statements:
 * Use `if` to specify a block of code to be executed, if a specified condition is true
 * Use `else` to specify a block of code to be executed, if the same condition is false
 * Use `else if` to specify a new condition to test, if the first condition is false
-* Use `switch` to specify many alternative blocks of code to be executed
+* Use `switch` to specify many alternative blocks of code to be executed<br>
+### The if Statement
+Use the if statement to specify a block of code to be executed if a condition is true.
+<pre>
+<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">condition</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47; block of code to be executed if the condition is true</font>
+<font color="#000000">}</font>
+
+</pre>
+
+Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+
+## The else Statement
+Use the else statement to specify a block of code to be executed if the condition is false
+
+<pre>
+<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">condition</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47; block of code to be executed if the condition is true</font>
+<font color="#000000">}</font> <font color="#5e6d03">else</font> <font color="#000000">{</font>
+ &nbsp;<font color="#434f54">&#47;&#47; block of code to be executed if the condition is false</font>
+<font color="#000000">}</font>
+
+</pre>
 
 
 
