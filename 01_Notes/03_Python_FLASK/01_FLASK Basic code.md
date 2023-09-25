@@ -36,3 +36,6 @@ This Python code is a basic example of a web application using the Flask framewo
 
 
 In summary, this code sets up a basic Flask web application that responds with "Hello World" when you visit the root URL. When you run the script, it starts a development server, allowing you to access and test the application locally.
+
+
+
