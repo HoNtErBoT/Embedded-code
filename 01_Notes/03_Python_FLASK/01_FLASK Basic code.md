@@ -32,4 +32,7 @@ This Python code is a basic example of a web application using the Flask framewo
 
 - app.run(debug=True): If the script is run directly, Flask's built-in development server starts, and the web application becomes accessible locally. The debug=True argument enables debugging mode, which provides helpful error messages during development.
 
+  ![image](https://github.com/HoNtErBoT/Embedded-code/assets/109785046/2a6dff03-22bd-4154-805f-c20964629a20)
+
+
 In summary, this code sets up a basic Flask web application that responds with "Hello World" when you visit the root URL. When you run the script, it starts a development server, allowing you to access and test the application locally.
