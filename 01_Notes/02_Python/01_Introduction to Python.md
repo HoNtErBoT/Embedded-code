@@ -58,10 +58,8 @@ Python easily integrates with other languages, making it suitable for incorporat
 
 - **Modules:**
 Modules in Python are files containing Python code, which can define functions, classes, and variables. They allow you to organize your code into separate files and reuse code in different parts of your program.
-
 - **Comments:**
 Comments in Python are lines in your code that are not executed. They are preceded by the # symbol. Comments are used to explain the code, make notes, or temporarily disable code. They are essential for code readability and documentation.
-
 - **pip:**
 pip is the package installer for Python. It is used to install and manage Python packages from the Python Package Index (PyPI). With pip, you can easily install third-party libraries and modules to extend the functionality of your Python programs.
 
