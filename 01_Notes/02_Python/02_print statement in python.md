@@ -82,7 +82,7 @@ with open("output.txt", "w") as f:
 
 ```
 
-**Special Characters:**<br>
+## Special Characters
 You can include special characters in the output string.
 ```diff
 
