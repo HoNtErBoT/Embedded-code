@@ -6,6 +6,14 @@ To enable VNC in the raspberrypi please follow the below steps
 
 first we have to open terminal  and enable VNC from terminal
 
+```
+sudo raspi-config
+sudo apt-get install realvnc-vnc-server
+sudp apt-get install realvnc-vnc-viewer
+vncserver-virtual
+
+```
+
 ![image](https://github.com/user-attachments/assets/edb8026a-b290-407b-8105-645c952f6f0f)
 
 ![image](https://github.com/user-attachments/assets/30eb83aa-c024-48b6-83fa-805938f1ca1f)
@@ -17,13 +25,7 @@ first we have to open terminal  and enable VNC from terminal
 ![image](https://github.com/user-attachments/assets/d913c6f1-6ad4-49ff-96d2-0683237ff1c4)
 
 
-```
-sudo apt-get install realvnc-vnc-server
-sudp apt-get install realvnc-vnc-viewer
 
-vncserver-virtual
-
-```
 
 ![image](https://github.com/user-attachments/assets/229d4122-d306-4c05-9ef3-ae83281247ba)
 
