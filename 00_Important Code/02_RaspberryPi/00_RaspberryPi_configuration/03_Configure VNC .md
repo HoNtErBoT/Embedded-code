@@ -2,7 +2,7 @@
 
 VNC (virtual network computing) is a client-server software which can be used to display and control the screen content of the target system (server) on another system (client). For this purpose, keyboard entries, mouse movements, and clicks on the client side are transferred directly to the remote computer. So, if you install and activate VNC on a Raspberry Pi, you can easily install, configure, and manage the minicomputer from another PC. VNC is based on the cross-platform network protocol remote framebuffer protocol (RFB), which transmits the content as bitmaps
 
-To enable VNC in the raspberrypi please follow the below steps
+## To enable VNC in the raspberrypi please follow the below steps
 
 first we have to open terminal  and enable VNC from terminal
 
@@ -13,6 +13,8 @@ sudp apt-get install realvnc-vnc-viewer
 vncserver-virtual
 
 ```
+
+## 
 
 ![image](https://github.com/user-attachments/assets/edb8026a-b290-407b-8105-645c952f6f0f)
 
