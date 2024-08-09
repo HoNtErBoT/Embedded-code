@@ -14,7 +14,7 @@ vncserver-virtual
 
 ```
 
-## 
+## First we have to enable VNC Server from RaspberryPi Configuration
 
 ![image](https://github.com/user-attachments/assets/edb8026a-b290-407b-8105-645c952f6f0f)
 
@@ -27,12 +27,15 @@ vncserver-virtual
 ![image](https://github.com/user-attachments/assets/d913c6f1-6ad4-49ff-96d2-0683237ff1c4)
 
 
-
+## Install VNC Server and VNC Viewer
 
 ![image](https://github.com/user-attachments/assets/229d4122-d306-4c05-9ef3-ae83281247ba)
 
+## Enable VNC Server
 
 ![image](https://github.com/user-attachments/assets/9274785a-cdc5-42b4-8a89-8537850de975)
+
+## Connect VNC Viewer  from Our PC 
 
 ![image](https://github.com/user-attachments/assets/67af5dc7-4a46-4342-bc12-bc552eeb4cb3)
 
