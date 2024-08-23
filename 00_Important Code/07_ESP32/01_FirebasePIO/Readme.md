@@ -28,8 +28,6 @@ the above code can be able to extract intiger values from string
     #include <Firebase_ESP_Client.h>
     #include <addons/TokenHelper.h>
     #include <addons/RTDBHelper.h>
-    //#define WIFI_SSID "GNXS-3D42F0"
-    //#define WIFI_PASSWORD "BC62D23D42F0"
     #define WIFI_SSID "Embedded123"
     #define WIFI_PASSWORD "Embedded54321"
     #define API_KEY "AIzaSyC5HS3_VbGK9JkTgFh2pMS3CEddQoxiQDY"
