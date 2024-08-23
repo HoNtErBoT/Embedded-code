@@ -32,7 +32,28 @@ void loop()
 }
 
 ```
+## Platformio configurations
+```
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+            
+
+[env:esp32doit-devkit-v1]
+platform = espressif32
+board = esp32doit-devkit-v1
+framework = arduino
+lib_deps =  adafruit/Adafruit NeoPixel@^1.12.3
+monitor_speed = 9600
+```
 
 # Working
 
+![gif 5](https://github.com/user-attachments/assets/18864ca0-4f65-4e0e-86ce-9698b944566f)
 
