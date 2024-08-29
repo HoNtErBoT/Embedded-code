@@ -87,3 +87,5 @@ This is used to install the GTK+ 2.0 development library on a Raspberry Pi or an
 - libgtk2.0-dev: This library is necessary for building graphical user interface (GUI) applications. GTK+ (GIMP Toolkit) is a toolkit used to create windows, buttons, menus, and other visual elements in applications.
 
 By installing libgtk2.0-dev, you are getting all the necessary tools to develop or run software that has graphical windows and interactive elements, like apps with menus, buttons, text boxes, etc. It is especially useful when working with OpenCV or other programs that need to display images or video in a window on your Raspberry Pi.
+
+
