@@ -9,7 +9,7 @@ first we have to open terminal  and enable VNC from terminal
 ```
 sudo raspi-config
 sudo apt-get install realvnc-vnc-server
-sudp apt-get install realvnc-vnc-viewer
+sudo apt-get install realvnc-vnc-viewer
 vncserver-virtual
 
 ```
