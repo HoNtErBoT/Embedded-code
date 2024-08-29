@@ -88,4 +88,35 @@ This is used to install the GTK+ 2.0 development library on a Raspberry Pi or an
 
 By installing libgtk2.0-dev, you are getting all the necessary tools to develop or run software that has graphical windows and interactive elements, like apps with menus, buttons, text boxes, etc. It is especially useful when working with OpenCV or other programs that need to display images or video in a window on your Raspberry Pi.
 
+## 5.Additional Dependencies for OpenCV Optimization
 
+For enhanced OpenCV operation optimization, install these extra dependencies
+
+```
+sudo apt-get install libatlas-base-dev gfortran
+
+```
+## 6. Installing pip (Package Management Tool)
+
+If you haven’t installed pip for Python 3 yet, execute the command below
+
+```
+sudo apt-get install python3-pip
+
+```
+
+## 7. Installing the Numpy Library and opencv
+
+Numpy provides essential mathematical and numerical capabilities useful for OpenCV. If you haven’t installed it yet, use the command:
+
+```
+pip install numpy
+
+```
+Execute the following command to install OpenCV on Raspberry Pi.
+
+
+```
+sudo apt install python3-opencv
+
+```
