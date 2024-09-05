@@ -5,3 +5,72 @@ This ESP32 code is designed to control three LEDs—Red, Green, and Blue—conne
 
 
 ![ESP32RGBSerialCtrllogo-gif](https://github.com/user-attachments/assets/b1ad24db-e382-4eb6-b144-3ac84bbab1ec)
+
+
+#  Reference link and code
+- <p><a href="https://wokwi.com/projects/408073592291807233">Project Link</a></p>
+
+```
+/*
+author  : Rajeev TR
+date    : 04/09/2024
+https://github.com/HoNtErBoT
+*/
+
+
+#define R 21
+#define G 19
+#define B 18
+ void colorDisplay(char x)
+ {
+  if(x=='r')
+    {
+      Serial.println("RED LED ON");
+      digitalWrite(R,LOW);
+      digitalWrite(G,HIGH);
+      digitalWrite(B,HIGH);
+    }
+  else  if(x=='g')
+    {
+      Serial.println("Green LED ON");
+      digitalWrite(G,LOW);
+      digitalWrite(R,HIGH);
+      digitalWrite(B,HIGH);
+    } 
+  else if(x=='b')
+    {
+      Serial.println("Blue LED ON");
+      digitalWrite(B,LOW);
+      digitalWrite(G,HIGH);
+      digitalWrite(R,HIGH);
+    }  
+   
+ }
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  //Serial.println("Hello, ESP32!");
+  pinMode(R, OUTPUT);
+  pinMode(G, OUTPUT);
+  pinMode(B, OUTPUT);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+   // this speeds up the simulation
+  delay(10);
+  char x;
+  if(x=Serial.read())
+   {
+     
+      
+    colorDisplay(x);
+     
+  }
+  }
+
+
+
+
+```
