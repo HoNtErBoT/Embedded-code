@@ -16,5 +16,46 @@ This repository is used to store circuit, codes and short notes as a reference t
 
 
 
+# PIO remainder
+
+
+
+        Node MCU Enviornment
+
+[env:nodemcuv2]
+platform = espressif8266
+board = nodemcuv2
+framework = arduino
+monitor_speed = 9600
+
+
+        ESP32 Enviornment
+        
+[env:esp32doit-devkit-v1]
+platform = espressif32
+board = esp32doit-devkit-v1
+framework = arduino
+monitor_speed = 9600
+
+
+        Arduino Enviornment
+
+[env:uno]
+platform = atmelavr
+board = uno
+framework = arduino
+monitor_speed = 9600
+
+
+        WiFi Creadentials
+
+
+ WIFI_SSID      : Embedded
+ WIFI_PASSWORD  : Embedded54321
+
+
+
+
+
 
 
