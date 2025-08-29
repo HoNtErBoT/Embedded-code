@@ -7,8 +7,10 @@ At its heart, the MFRC522 acts as a bridge between a microcontroller (like an Ar
 - **Reader/Writer:** It can both detect (read) the unique identifier (UID) of a nearby tag and also write data to or read data from the tag's memory blocks
 - **Communication Protocol:** It typically communicates with a host microcontroller using the **SPI** (Serial Peripheral Interface) protocol, though it also supports I2C and UART interfaces.
 - **Compatibility:** It is designed to work with ISO/IEC 14443 Type A standards, making it compatible with the widely used MIFARE series of cards (e.g., MIFARE Classic 1K, MIFARE Ultralight).
-- 
 
+## How It Works
+
+In simple terms, think of the MFRC522 module as a radio that's both shouting and listening. It sends out a constant, short-range energy field. When you bring an RFID card or tag near it, the tag's internal antenna catches this energy, which instantly powers it on (like magic, no battery needed!). Once powered, the tag uses that same energy to broadcast its unique ID number back. The MFRC522 "hears" this ID and sends it to the main controller (like an Arduino) to be identified 
 
 
 
