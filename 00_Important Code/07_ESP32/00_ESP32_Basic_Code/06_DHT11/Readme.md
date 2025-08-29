@@ -19,3 +19,49 @@ In simple terms, the DHT sensor works by measuring two physical properties of th
 - Choose the DHT11 for basic projects where high precision is not critical and cost is a primary concern. It's great for simple indoor environment monitoring. 🏡
 - Choose the DHT22 when you need better accuracy, a wider measurement range (especially for colder temperatures), and are willing to spend a little more. It is better suited for more serious data logging and weather station projects. 🌦️
 
+  # Code
+      
+        /**********************************************************************************************
+       *                              DHT11/22 INTERFACE                                            *
+      ***********************************************************************************************/
+      #include<Arduino.h>
+      #include "DHT.h"
+      #define DHTPIN 2  
+      #define DHTTYPE DHT22  
+      DHT dht(DHTPIN, DHTTYPE); 
+      /**********************************************************************************************/
+      float temprature();
+      /**********************************************************************************************/
+      float t;
+      /**********************************************************************************************/
+      void setup() 
+      {
+        Serial.begin(9600); 
+        Serial.println("DHTxx test!");
+        dht.begin();
+      }
+      /**********************************************************************************************/
+      void loop() 
+      {
+        float k=  temprature();
+      }
+      /**********************************************************************************************/
+      float temprature()
+      {
+        float h = dht.readHumidity();
+        t = dht.readTemperature();
+        float f = dht.readTemperature(true);
+        if (isnan(h) || isnan(t) || isnan(f)) 
+        {
+          Serial.println("Failed to read from DHT sensor!");
+          return 0;
+        }
+        float hi = dht.computeHeatIndex(f, h);
+         Serial.print("Temperature: "); 
+        Serial.print(t);
+        Serial.print(" *C ");
+        Serial.println(); 
+        return t;
+      }
+      /**********************************************************************************************/
+
